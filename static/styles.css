@@ -1,0 +1,45 @@
+/* Styles for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Styles for the buttons */
+  .button {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    margin: 5px;
+  }
+  
+  .button:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  /* Styles for the header and links */
+  h3 {
+    margin-top: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  a:hover {
+    color: #555;
+  }
+  

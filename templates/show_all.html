@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+   </head>
+   <body>
+      
+      <h3>
+         <a href = "{{ url_for('show_all') }}">Delicious-Taste</a>
+      </h3>
+      
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+		
+      <h3>Delicious Food (<a href = "{{ url_for('new') }}">Add new food
+         </a>)</h3>
+      
+      <table>
+         <thead>
+            <tr>
+               <th>S.No</th>
+               <th>Name</th>
+               <th>City</th>
+               <th>Availability</th>
+               <th>Update </th>
+               <th>Delete</th>
+            </tr>
+         </thead>
+         
+         <tbody>
+            {% for food in Foods %}
+               <tr>
+                  <td>{{ loop.index }}</td>
+                  <td>{{ food.name }}</td>
+                  <td>{{ food.price }}</td>
+                  <td>{{ food.availability }}</td>
+                  <td>
+                    <a href="/update/{{food.id}}" type="button" 
+                    style="text-decoration: none; background: #bd2424; color: #fff; margin: 5px; padding: 4px" >Update</button>
+                  </td>
+                  <td>
+                    <a href="/delete/{{food.id}}" type="button"   style="text-decoration: none; background: #ff0404; color: #fff; margin: 5px; padding: 4px" >Delete</button>
+                  </td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+      
+   </body>
+</html>
