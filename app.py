@@ -9,7 +9,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Initialize the SQLAlchemy object
 db = SQLAlchemy(app)
 
-
 class Food(db.Model):
     id = db.Column('food_id', db.Integer, primary_key=True)
     name = db.Column(db.String(100))
@@ -74,5 +73,5 @@ def delete(id):
 
 if __name__ == '__main__':
    with app.app_context():
-    db.create_all()
-    app.run(debug=True)
+      db.create_all()
+      app.run(debug=True)

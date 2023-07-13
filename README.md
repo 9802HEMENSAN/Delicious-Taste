@@ -1,6 +1,6 @@
 # Delicious-Taste
 Delicious food ordering platform.
-
+ 
 # S2 D1 - Live Project(In Class)
 
 ## **Project: "Zomato Chronicles: The Great Food Fiasco" with Flask**
